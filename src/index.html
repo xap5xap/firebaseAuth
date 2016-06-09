@@ -10,11 +10,22 @@
   {{/unless}}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script>
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyAQ3RqRCZSmOH0U45g1a-1UQwrstA2YsVU",
+          authDomain: "project-5516481825204106582.firebaseapp.com",
+          databaseURL: "https://project-5516481825204106582.firebaseio.com",
+          storageBucket: "project-5516481825204106582.appspot.com",
+      };
+      firebase.initializeApp(config);
+  </script>
 </head>
 <body>
   <firebase-auth-app>Loading...</firebase-auth-app>
 
-  
+
 
     {{#each scripts.polyfills}}<script src="{{.}}"></script>{{/each}}
     <script>
@@ -23,7 +34,7 @@
       }).catch(console.error.bind(console));
     </script>
 
-  
+
 
 
 
